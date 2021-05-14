@@ -5,11 +5,11 @@
   
 	<!DOCTYPE html> 
 	<html> 
-	<head> <meta charset="ISO-8859-1">
+	<head> <meta charset=y>
 	 <title>Products Management</title> 
 	 <link rel="stylesheet" href="Views/bootstrap.min.css"> 
 <script src="Components/jquery-3.2.1.min.js">
-</script> <script src="/PAF_Product/WebContent/Components/product.js"></script>
+</script> <script src="Components/product.js"></script>
 	</head>
 	<style>
 * {
@@ -142,8 +142,7 @@ input[type=button,]:hover {
   <input type="hidden" id="hidProductIDSave"         name="hidProductIDSave" value=""> 
       
       
-     <!--   <input id="btnSave" name="btnSave" type="submit" value="Save"      class="btn btn-primary"> 
-       <input type="hidden" id="hidProductIDSave" name="hidProductIDSave" value=""> -->
+    
     </div>
   </form>
 </div>

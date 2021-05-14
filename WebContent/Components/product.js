@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 $(document).ready(function() {  
 	
 	if ($("#alertSuccess").text().trim() == "")  {   
@@ -19,7 +15,7 @@ $(document).on("click", "#btnSave", function(event) {
 
  
  // Form validation-------------------  
-var status = validateItemForm(); 
+var status = validateProductForm(); 
 
 if (status != true)  {   
 	$("#alertError").text(status);   
@@ -34,7 +30,7 @@ $.ajax(
 		{   
 			url : "ProductsAPI",   
 			type : type,   
-			data : $("#formItem").serialize(),   
+			data : $("#formProduct").serialize(),   
 			dataType : "text",   
 			complete : function(response, status)   {    
 				
@@ -76,7 +72,7 @@ $(document).on("click", ".btnUpdate", function(event) {
 }); 
  
 // CLIENT-MODEL================================================================
-function validateItemForm() {  // CODE  
+function validateProductForm() {  // CODE  
 	if ($("#productCode").val().trim() == "")  {  
 		return "Insert product Code.";
 		} 
@@ -111,11 +107,13 @@ return true;
 
 } 
 
-function onItemSaveComplete(response, status) {  
+function onProductSaveComplete(response, status) {  
 	if (status == "success")  {   
 		var resultSet = JSON.parse(response); 
 
-if (resultSet.status.trim() == "success")   {    
+if (resultSet.status.trim() == "success")   {
+
+	document.location = "products.jsp"; 
 	$("#alertSuccess").text("Successfully saved.");    
 	$("#alertSuccess").show(); 
 
@@ -130,9 +128,9 @@ if (resultSet.status.trim() == "success")   {
 	$("#alertError").show(); 
 	} 
 else  {   
-		$("#alertError").text("Unknown error while saving..");   
+		$("#alertError").text("Unknown error while saving..");  
 		$("#alertError").show();  } 
 
 
-$("#hidProductIDSave").val("");  $("#formItem")[0].reset(); 
+$("#hidProductIDSave").val("");  $("#formProduct")[0].reset(); 
 } 
