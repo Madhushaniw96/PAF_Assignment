@@ -111,7 +111,7 @@ public class Product {
 	  			+ "type='button' value='Update'         "
 	  			+ "class=' btnUpdate btn btn-secondary'></td>      "
 	  			+ "<td><form method='post' action='products.jsp'>     "
-	  			+ " <input name='btnRemove' type='submit'        "
+	  			+ " <input name='btnRemove' type='button'        "
 	  			+ "value='Remove' class='btn btn-danger'>    "
 	  			+ "  <input name='hidProductIDDelete' type='hidden'       "
 	  			+ "value='" + productID + "'>" + "</form></td></tr>";  
