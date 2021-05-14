@@ -111,9 +111,7 @@ function onProductSaveComplete(response, status) {
 	if (status == "success")  {   
 		var resultSet = JSON.parse(response); 
 
-if (resultSet.status.trim() == "success")   {
-
-	document.location = "products.jsp"; 
+if (resultSet.status.trim() == "success")   {    
 	$("#alertSuccess").text("Successfully saved.");    
 	$("#alertSuccess").show(); 
 
@@ -128,9 +126,9 @@ if (resultSet.status.trim() == "success")   {
 	$("#alertError").show(); 
 	} 
 else  {   
-		$("#alertError").text("Unknown error while saving..");  
+		$("#alertError").text("Unknown error while saving..");   
 		$("#alertError").show();  } 
 
 
-$("#hidProductIDSave").val("");  $("#formProduct")[0].reset(); 
+$("#hidProductIDSave").val("");  $("formProduct")[0].reset(); 
 } 
