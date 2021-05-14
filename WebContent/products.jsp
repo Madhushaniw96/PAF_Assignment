@@ -9,7 +9,7 @@
 	 <title>Products Management</title> 
 	 <link rel="stylesheet" href="Views/bootstrap.min.css"> 
 <script src="Components/jquery-3.2.1.min.js">
-</script> <script src="/PAF_Product/WebContent/Components/product.js"></script>
+</script> <script src="Components/product.js"></script>
 	</head>
 	<style>
 * {
@@ -93,7 +93,7 @@ input[type=button,]:hover {
  
  <h1 style="align:center">Products Management</h1> 
  <div class="container">
-  <form id="formItem" name="formItem" method="post" action="products.jsp">
+  <form id="formProduct" name="formProduct" method="post" action="products.jsp">
     <div class="row">
       <div class="col-25">
         <label for="fname">Products code:</label>
@@ -142,8 +142,7 @@ input[type=button,]:hover {
   <input type="hidden" id="hidProductIDSave"         name="hidProductIDSave" value=""> 
       
       
-     <!--   <input id="btnSave" name="btnSave" type="submit" value="Save"      class="btn btn-primary"> 
-       <input type="hidden" id="hidProductIDSave" name="hidProductIDSave" value=""> -->
+     
     </div>
   </form>
 </div>
